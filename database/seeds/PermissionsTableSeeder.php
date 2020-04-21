@@ -94,7 +94,7 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => '22',
-                'title' => 'invoice_access',
+                'title' => 'profile_password_edit',
             ],
             [
                 'id'    => '23',
@@ -102,7 +102,15 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => '24',
-                'title' => 'profile_password_edit',
+                'title' => 'customer_create',
+            ],
+            [
+                'id'    => '25',
+                'title' => 'invoice_access',
+            ],
+            [
+                'id'    => '26',
+                'title' => 'invoice_create',
             ],
         ];
 

@@ -15,12 +15,16 @@ class PermissionRoleTableSeeder extends Seeder
 
         $role = Role::where('title', 'Free Plan')->first()->permissions();
         $role->attach($permissions->firstWhere('title', 'invoice_access'));
-        $role->attach($permissions->firstWhere('title', 'customer_access'), ['max_amount' => 3]);
+        $role->attach($permissions->firstWhere('title', 'invoice_create'));
+        $role->attach($permissions->firstWhere('title', 'customer_access'));
+        $role->attach($permissions->firstWhere('title', 'customer_create'), ['max_amount' => 3]);
         $role->attach($permissions->firstWhere('title', 'profile_password_edit'));
 
         $role = Role::where('title', 'Professional Plan')->first()->permissions();
         $role->attach($permissions->firstWhere('title', 'invoice_access'));
+        $role->attach($permissions->firstWhere('title', 'invoice_create'));
         $role->attach($permissions->firstWhere('title', 'customer_access'));
+        $role->attach($permissions->firstWhere('title', 'customer_create'));
         $role->attach($permissions->firstWhere('title', 'profile_password_edit'));
 
     }

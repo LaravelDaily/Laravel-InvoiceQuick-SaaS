@@ -23,7 +23,7 @@ class RolesTableSeeder extends Seeder
             [
                 'id'             => 3,
                 'title'          => 'Professional Plan',
-                'stripe_plan_id' => 'plan_xxxxxxxxxxxxxx',
+                'stripe_plan_id' => env('STRIPE_PLAN_PROFESSIONAL_ID', null),
                 'price'          => 900,
             ],
         ];

@@ -26,7 +26,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('invoices', 'InvoicesController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
 
     // Customers
-    Route::resource('customers', 'CustomersController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
+    Route::delete('customers/destroy', 'CustomersController@massDestroy')->name('customers.massDestroy');
+    Route::resource('customers', 'CustomersController');
 
     Route::get('billing', 'BillingController@index')->name('billing.index');
     Route::post('billing/checkout', 'BillingController@checkout')->name('billing.checkout');

@@ -94,5 +94,11 @@ return [
     'customer'       => [
         'title'          => 'Customers',
         'title_singular' => 'Customer',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => '',
+            'name'              => 'Name',
+            'name_helper'       => '',
+        ],
     ],
 ];

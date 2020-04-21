@@ -23,7 +23,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('countries', 'CountriesController');
 
     // Invoices
-    Route::resource('invoices', 'InvoicesController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
+    Route::delete('invoices/destroy', 'InvoicesController@massDestroy')->name('invoices.massDestroy');
+    Route::resource('invoices', 'InvoicesController');
 
     // Customers
     Route::delete('customers/destroy', 'CustomersController@massDestroy')->name('customers.massDestroy');

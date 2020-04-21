@@ -90,6 +90,16 @@ return [
     'invoice'        => [
         'title'          => 'Invoices',
         'title_singular' => 'Invoice',
+        'fields'         => [
+            'id'                    => 'ID',
+            'id_helper'             => '',
+            'customer_name'         => 'Customer',
+            'customer_name_helper'  => '',
+            'invoice_date'          => 'Invoice date',
+            'invoice_date_helper'   => '',
+            'invoice_amount'        => 'Invoice amount',
+            'invoice_amount_helper' => '',
+        ],
     ],
     'customer'       => [
         'title'          => 'Customers',
